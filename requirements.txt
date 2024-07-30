@@ -1,0 +1,5 @@
+Flask
+joblib
+fpdf
+pandas
+scikit-learn

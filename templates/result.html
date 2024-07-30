@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Prediction Result</h1>
+    </header>
+    <main>
+        <h2>Selected Features:</h2>
+        <p>Area: {{ area }} sq ft</p>
+        <p>Bedrooms: {{ bedrooms }}</p>
+        <p>Bathrooms: {{ bathrooms }}</p>
+        <p>Stories: {{ stories }}</p>
+        <p>Main Road: {{ mainroad }}</p>
+        <p>Guest Room: {{ guestroom }}</p>
+        <p>Basement: {{ basement }}</p>
+        <p>Hot Water Heating: {{ hotwaterheating }}</p>
+        <p>Air Conditioning: {{ airconditioning }}</p>
+        <p>Parking: {{ parking }}</p>
+        <p>Preferred Area: {{ prefarea }}</p>
+        <p>Furnishing Status: {{ furnishingstatus }}</p>
+
+        <h2>Predicted Price:</h2>
+        <p>₹{{ predicted_price }}</p>
+
+        <form action="/download" method="POST">
+            <button type="submit">Download Result as PDF</button>
+        </form>
+    </main>
+</body>
+</html>
